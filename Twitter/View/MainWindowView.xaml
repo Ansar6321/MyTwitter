@@ -22,7 +22,7 @@
         <StackPanel Grid.Column="0">
             <Ellipse Width="45" Height="45">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="ProfilePicture.jpg"/>
+                    <!--<ImageBrush ImageSource="{}"/>-->
                 </Ellipse.Fill>
             </Ellipse>
         </StackPanel>
