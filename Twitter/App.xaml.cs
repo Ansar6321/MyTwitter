@@ -7,7 +7,7 @@ using Twitter.ViewModel;
 
 namespace Twitter {
     public partial class App : Application {
-        public IContainer Container { get; set; }
+        static public IContainer Container { get; set; }
 
         protected override void OnStartup(StartupEventArgs e) {
             base.OnStartup(e);
@@ -15,6 +15,8 @@ namespace Twitter {
             containerBuilder.RegisterType<MainWindowView>().As<IMainWindowView>();
             containerBuilder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>();
             containerBuilder.RegisterType<FakeFeedService>().As<IFeedService>();
+            containerBuilder.RegisterType<ShowUserWindowView>().As<IShowUserWindowView>();
+            containerBuilder.RegisterType<ShowUserWindowViewModel>().As<IShowUserWindowViewModel>();
             //еще какие-то сервисы можно сюда добавить
             Container = containerBuilder.Build();
             var MainWindowViewModel = Container.Resolve<IMainWindowViewModel>();

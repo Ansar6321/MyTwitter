@@ -73,13 +73,19 @@
     <Compile Include="Interfaces\IFeedService.cs" />
     <Compile Include="Interfaces\IMainWindowView.cs" />
     <Compile Include="Interfaces\IMainWindowViewModel.cs" />
+    <Compile Include="Interfaces\IShowUserWindowView.cs" />
+    <Compile Include="Interfaces\IShowUserWindowViewModel.cs" />
     <Compile Include="Model\Publication.cs" />
     <Compile Include="Model\Theme.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Services\FakeFeedService.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\ShowUserWindowViewModel.cs" />
     <Compile Include="View\MainWindowView.xaml.cs">
       <DependentUpon>MainWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShowUserWindowView.xaml.cs">
+      <DependentUpon>ShowUserWindowView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +120,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\MainWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShowUserWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

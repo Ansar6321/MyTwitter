@@ -15,16 +15,20 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
-            <Ellipse Width="45" Height="45">
-                <Ellipse.Fill>
-                    <!--<ImageBrush ImageSource="{}"/>-->
-                </Ellipse.Fill>
-            </Ellipse>
+        <StackPanel>
+            <Button Content="Show User" Command="{Binding ShowUser}"/>
+            <ListBox ItemsSource="{Binding Publications}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Label Content="{Binding PostDate}"/>
+                            <Label Content="{Binding PostTheme}"/>
+                            <Label Content="{Binding Content}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Add a post" Command="{Binding AddPublication}"/>
         </StackPanel>
     </Grid>
 </Window>

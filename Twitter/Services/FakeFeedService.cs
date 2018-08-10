@@ -14,7 +14,8 @@ namespace Twitter.Services {
             Publications.Add(publication);
         }
 
-        public List<Publication> GetPublications() {
+        public FakeFeedService() {
+            Publications = new List<Publication>();
             Publications.Add(new Publication {
                 Content = "First Publication",
                 Id = 1,
@@ -45,6 +46,9 @@ namespace Twitter.Services {
                 },
                 Sender_Id = 1
             });
+        }
+
+        public List<Publication> GetPublications() {
             return Publications;
         }
     }
