@@ -69,8 +69,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Common\NotifyObject.cs" />
+    <Compile Include="Common\PasswordHelper.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Interfaces\IFeedService.cs" />
+    <Compile Include="Interfaces\ILoginWindowView.cs" />
+    <Compile Include="Interfaces\ILoginWindowViewModel.cs" />
     <Compile Include="Interfaces\IMainWindowView.cs" />
     <Compile Include="Interfaces\IMainWindowViewModel.cs" />
     <Compile Include="Interfaces\IShowUserWindowView.cs" />
@@ -79,8 +82,12 @@
     <Compile Include="Model\Theme.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Services\FakeFeedService.cs" />
+    <Compile Include="ViewModel\LoginWindowViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ShowUserWindowViewModel.cs" />
+    <Compile Include="View\LoginWindowView.xaml.cs">
+      <DependentUpon>LoginWindowView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainWindowView.xaml.cs">
       <DependentUpon>MainWindowView.xaml</DependentUpon>
     </Compile>
@@ -119,6 +126,10 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\LoginWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

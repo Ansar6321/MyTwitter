@@ -17,9 +17,11 @@ namespace Twitter {
             containerBuilder.RegisterType<FakeFeedService>().As<IFeedService>();
             containerBuilder.RegisterType<ShowUserWindowView>().As<IShowUserWindowView>();
             containerBuilder.RegisterType<ShowUserWindowViewModel>().As<IShowUserWindowViewModel>();
+            containerBuilder.RegisterType<LoginWindowView>().As<ILoginWindowView>();
+            containerBuilder.RegisterType<LoginWindowViewModel>().As<ILoginWindowViewModel>();
             //еще какие-то сервисы можно сюда добавить
             Container = containerBuilder.Build();
-            var MainWindowViewModel = Container.Resolve<IMainWindowViewModel>();
+            var MainWindowViewModel = Container.Resolve<ILoginWindowViewModel>();
             this.MainWindow = MainWindowViewModel.View as Window;
             this.MainWindow.Show();
         }

@@ -9,6 +9,7 @@ using Twitter.Model;
 namespace Twitter.ViewModel {
     public class ShowUserWindowViewModel : IShowUserWindowViewModel {
         public IShowUserWindowView View { get; private set; }
+
         public ShowUserWindowViewModel(IShowUserWindowView view, User user) {
             this.View = view;
             CurrentUser = user;
